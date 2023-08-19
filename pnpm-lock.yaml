@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@nextui-org/badge':
+    specifier: ^2.0.9
+    version: 2.0.9(react@18.2.0)(tailwindcss@3.3.3)
   '@nextui-org/button':
     specifier: 2.0.9
     version: 2.0.9(framer-motion@10.15.1)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3)
@@ -379,6 +382,20 @@ packages:
       - tailwindcss
     dev: false
 
+  /@nextui-org/badge@2.0.9(react@18.2.0)(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-cKmFJTOCGa2jbRSHecfveO4By0AlsSiosP+FBK2dm9SxjCbyyONLBUHNwEmCn7US/TdBnKJYW79rpkkplptbSA==}
+    peerDependencies:
+      react: '>=18'
+    dependencies:
+      '@nextui-org/react-utils': 2.0.6(react@18.2.0)
+      '@nextui-org/shared-utils': 2.0.2(react@18.2.0)
+      '@nextui-org/system-rsc': 2.0.3(react@18.2.0)(tailwindcss@3.3.3)
+      '@nextui-org/theme': 2.0.5(tailwindcss@3.3.3)
+      react: 18.2.0
+    transitivePeerDependencies:
+      - tailwindcss
+    dev: false
+
   /@nextui-org/button@2.0.9(framer-motion@10.15.1)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.3):
     resolution: {integrity: sha512-vR7uviS8YuMXFpxvkzLv/CPNMXHZfMLtdndN1Nt662TF1gHkcE8fvaeT5ZPLZTtQ2SEYbohjFtzF9WOMHHLcXg==}
     peerDependencies:
@@ -525,12 +542,26 @@ packages:
     resolution: {integrity: sha512-hYGZ6vgyF1QhatU1E3BhhOy/sOrw5D813lXD/bQ+YkSAS5eRhhWFgpka+PLiZGq8GWAyXKfsOuRucdoGSo4g1w==}
     dev: false
 
+  /@nextui-org/react-rsc-utils@2.0.6:
+    resolution: {integrity: sha512-32hglPfvA77lFO1XbDBf8a/bVthRjFTWWsYAMGWFF4GKhl/WYBzVRaFmIQjimd6FOfLFhPvolWHEukH3kTlyyQ==}
+    dev: false
+
   /@nextui-org/react-utils@2.0.5(react@18.2.0):
     resolution: {integrity: sha512-Lh9hTBdbHLgBx7adWBLPSeKbQmN92fl/k1pvjw/CiCjW4nqTjjzxsNEjseGnMv6qwOk0nczlJ5lzKrHwnjNKQQ==}
     peerDependencies:
       react: '>=18'
     dependencies:
       '@nextui-org/react-rsc-utils': 2.0.5
+      '@nextui-org/shared-utils': 2.0.2(react@18.2.0)
+      react: 18.2.0
+    dev: false
+
+  /@nextui-org/react-utils@2.0.6(react@18.2.0):
+    resolution: {integrity: sha512-9mRDJj1hNNdKTxt9idQc/OVI+3UzvSErRCjN2hfVVi2c5JrR5b0/Zpx7PV0PHy7yfGUn1hyvwK5ZTVkNhxISKQ==}
+    peerDependencies:
+      react: '>=18'
+    dependencies:
+      '@nextui-org/react-rsc-utils': 2.0.6
       '@nextui-org/shared-utils': 2.0.2(react@18.2.0)
       react: 18.2.0
     dev: false
@@ -655,6 +686,24 @@ packages:
 
   /@nextui-org/theme@2.0.4(tailwindcss@3.3.3):
     resolution: {integrity: sha512-hTOMnvb58FnlRG27S6w7ruIdflZs0D9gVaUOxf9ct8YPHr4ZEzgURi6z5ir9V9ZOP/r3Yi6PqqROzJ708TIvgg==}
+    peerDependencies:
+      tailwindcss: '*'
+    dependencies:
+      color: 4.2.3
+      color2k: 2.0.2
+      deepmerge: 4.3.1
+      flat: 5.0.2
+      lodash.foreach: 4.5.0
+      lodash.get: 4.4.2
+      lodash.kebabcase: 4.1.1
+      lodash.mapkeys: 4.6.0
+      lodash.omit: 4.5.0
+      tailwind-variants: 0.1.13(tailwindcss@3.3.3)
+      tailwindcss: 3.3.3
+    dev: false
+
+  /@nextui-org/theme@2.0.5(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-4br6xRTYGbDCL8Vwm4CP0VqEXORROyQCmLSwNFaXr6s0vB5nX5tnJHqyDIvpq5Al7I2H8HMG2KOUHyhbaKOKFA==}
     peerDependencies:
       tailwindcss: '*'
     dependencies:
