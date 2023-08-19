@@ -1,6 +1,6 @@
-# Next.js & NextUI Template
+# Masters Promotion Register - Fūrinkazan
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+Welcome to the Fūrinkazan Masters Showcase App! This platform is designed to honor and highlight the exceptional mastery of martial arts instructors associated with the Fūrinkazan philosophy.
 
 ## Technologies Used
 
@@ -14,27 +14,21 @@ This is a template for creating applications using Next.js 13 (app directory) an
 
 ## How to Use
 
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
+### Use or contribute this repo
 
 ```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+git clone git@github.com:wolfcito/masters-promotions.git
 ```
 
 ### Install dependencies
 
 ```bash
-npm install
+cd masters-promotions
+pnpm install
 ```
 
 ### Run the development server
 
 ```bash
-npm run dev
+pnpm dev
 ```
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
