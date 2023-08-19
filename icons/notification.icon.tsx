@@ -1,9 +1,11 @@
+import { IconSvgProps } from '~/types'
+
 export function NotificationIcon({
   size,
   height,
   width,
   ...props
-}: NotificationIconProps) {
+}: IconSvgProps) {
   return (
     <svg
       fill="none"
@@ -20,10 +22,4 @@ export function NotificationIcon({
       />
     </svg>
   )
-}
-
-interface NotificationIconProps
-  extends JSX.IntrinsicAttributes,
-    React.SVGProps<SVGSVGElement> {
-  size: number
 }

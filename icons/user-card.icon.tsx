@@ -1,9 +1,6 @@
-export function UserCardIcon({
-  size,
-  height,
-  width,
-  ...props
-}: UserCardIconProps) {
+import { IconSvgProps } from '~/types'
+
+export function UserCardIcon({ size, height, width, ...props }: IconSvgProps) {
   return (
     <svg width={24} height={24} fill="none" {...props}>
       <path
@@ -12,10 +9,4 @@ export function UserCardIcon({
       />
     </svg>
   )
-}
-
-interface UserCardIconProps
-  extends JSX.IntrinsicAttributes,
-    React.SVGProps<SVGSVGElement> {
-  size: number
 }

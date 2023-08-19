@@ -1,4 +1,6 @@
-export function HomeIcon({ size, height, width, ...props }: HomeIconProps) {
+import { IconSvgProps } from '~/types'
+
+export function HomeIcon({ size, height, width, ...props }: IconSvgProps) {
   return (
     <svg width={24} height={24} fill="none" {...props}>
       <path
@@ -7,10 +9,4 @@ export function HomeIcon({ size, height, width, ...props }: HomeIconProps) {
       />
     </svg>
   )
-}
-
-interface HomeIconProps
-  extends JSX.IntrinsicAttributes,
-    React.SVGProps<SVGSVGElement> {
-  size: number
 }
