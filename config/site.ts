@@ -1,69 +1,54 @@
-export type SiteConfig = typeof siteConfig;
+export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-	name: "Next.js + NextUI",
-	description: "Make beautiful websites regardless of your design experience.",
-	navItems: [
-		{
-			label: "Home",
-			href: "/",
-		},
+  name: 'Fūrinkazan - Masters Promotion Register',
+  description:
+    'Welcome to the Fūrinkazan Masters Showcase App! This platform is designed to honor and highlight the exceptional mastery of martial arts instructors associated with the Fūrinkazan philosophy.',
+  navItems: [
     {
-      label: "Docs",
-      href: "/docs",
+      label: 'Home',
+      href: '/',
+    },
+  ],
+  navMenuItems: [
+    {
+      label: 'Profile',
+      href: '/profile',
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: 'Dashboard',
+      href: '/dashboard',
     },
     {
-      label: "Blog",
-      href: "/blog",
+      label: 'Projects',
+      href: '/projects',
     },
     {
-      label: "About",
-      href: "/about",
-    }
-	],
-	navMenuItems: [
-		{
-			label: "Profile",
-			href: "/profile",
-		},
-		{
-			label: "Dashboard",
-			href: "/dashboard",
-		},
-		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
-		},
-	],
-	links: {
-		github: "https://github.com/nextui-org/nextui",
-		twitter: "https://twitter.com/getnextui",
-		docs: "https://nextui.org",
-		discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev"
-	},
-};
+      label: 'Team',
+      href: '/team',
+    },
+    {
+      label: 'Calendar',
+      href: '/calendar',
+    },
+    {
+      label: 'Settings',
+      href: '/settings',
+    },
+    {
+      label: 'Help & Feedback',
+      href: '/help-feedback',
+    },
+    {
+      label: 'Logout',
+      href: '/logout',
+    },
+  ],
+  links: {
+    github: 'https://github.com/wolfcito',
+    twitter: 'https://twitter.com/AKAwolfcito',
+    docs: 'https://wolfcito.mundovirtual.solutions',
+    discord: '#',
+    sponsor: 'https://patreon.com/wolfcito',
+  },
+}
