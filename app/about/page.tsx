@@ -4,11 +4,12 @@ export default function AboutPage() {
   return (
     <div>
       <h1 className={title()}>Fūrinkazan</h1>
-
-      <p>
+      <br />
+      <br />
+      <span>
         This platform is designed to honor and highlight the exceptional mastery
         of martial arts instructors associated with the Fūrinkazan philosophy.
-      </p>
+      </span>
     </div>
   )
 }
