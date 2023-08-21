@@ -20,7 +20,13 @@ export function Navbar() {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="max-w-fit gap-3">
           <NextLink className="flex items-center justify-start gap-1" href="/">
-            <p className="font-bold text-inherit">Fūrinkazan</p>
+            <p
+              className={
+                'bg-gradient-to-b from-[#FF1CF7] to-[#b249f8] bg-clip-text text-lg font-bold text-transparent'
+              }
+            >
+              Fūrinkazan
+            </p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
