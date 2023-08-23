@@ -8,7 +8,14 @@ export default async function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4">
       {newsFeed.map((item) => (
-        <Card key={nanoid()} emoji={item.image} image={item.image} />
+        <Card
+          key={nanoid()}
+          emoji={item.image}
+          image={item.image}
+          name={item.user.name}
+          nickname={`@${item.user.nickname}`}
+          likes={item.likes}
+        />
       ))}
     </section>
   )
