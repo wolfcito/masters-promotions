@@ -17,7 +17,10 @@ export function Card({
   likes = 0,
 }: CategoryProps) {
   return (
-    <MainCard className="w-full" isBlurred>
+    <MainCard
+      className="w-full dark:shadow-sm dark:shadow-violet-700"
+      isBlurred
+    >
       <CardHeader className="justify-between">
         <div className="flex gap-5">
           <Avatar isBordered radius="full" size="md" src="/tigreicon.png" />
