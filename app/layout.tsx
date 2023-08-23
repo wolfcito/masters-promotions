@@ -4,10 +4,13 @@ import { fontSans } from '~/config/fonts'
 import { Providers } from './providers'
 
 import clsx from 'clsx'
-import { Navbar } from '~/components/navbar'
-import { Footer } from '~/components/footer'
+
 import { Metadata } from 'next'
 import { siteConfig } from '~/config/site'
+import { Navbar } from '~/components/navbar'
+import { BottomNavbar } from '~/components/bottom-navbar'
+
+import { categoriesService } from '~/services'
 
 export const metadata: Metadata = {
   title: {
@@ -26,7 +29,9 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
+  const categories = await categoriesService()
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
@@ -42,7 +47,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <main className="container mx-auto max-w-lg flex-grow px-6 pb-16 pt-8">
               {children}
             </main>
-            <Footer />
+            <BottomNavbar categories={categories} />
           </div>
         </Providers>
       </body>
