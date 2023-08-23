@@ -15,6 +15,7 @@ export default async function Home() {
           name={item.user.name}
           nickname={`@${item.user.nickname}`}
           likes={item.likes}
+          categoryImage={item.category.image}
         />
       ))}
     </section>

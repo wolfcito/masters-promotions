@@ -15,6 +15,7 @@ export function Card({
   name = 'Unknown',
   nickname = '@unknown',
   likes = 0,
+  categoryImage = '/tigreicon.png',
 }: CategoryProps) {
   return (
     <MainCard
@@ -23,7 +24,7 @@ export function Card({
     >
       <CardHeader className="justify-between">
         <div className="flex gap-5">
-          <Avatar isBordered radius="full" size="md" src="/tigreicon.png" />
+          <Avatar isBordered radius="full" size="md" src={categoryImage} />
           <div className="flex flex-col items-start justify-center gap-1">
             <h4 className="text-small text-default-600 font-semibold leading-none">
               {name}

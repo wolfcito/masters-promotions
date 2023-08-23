@@ -6,4 +6,5 @@ export interface CategoryProps {
   slug?: string
   nickname?: string
   likes?: number
+  categoryImage?: string
 }
