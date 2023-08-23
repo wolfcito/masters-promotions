@@ -18,7 +18,7 @@ export function Card({
 }: CategoryProps) {
   return (
     <MainCard
-      className="w-full dark:shadow-sm dark:shadow-violet-700"
+      className="w-full rounded-none dark:bg-stone-800 md:rounded-md"
       isBlurred
     >
       <CardHeader className="justify-between">
@@ -34,20 +34,21 @@ export function Card({
           </div>
         </div>
       </CardHeader>
-      <div className="text-small text-default-400 flex justify-center px-3 py-0">
+      <div className="text-small text-default-400 flex justify-center py-0">
         <Image
-          alt="description"
+          radius="none"
+          alt={`image of ${name}`}
           className="object-cover"
           height={200}
           src={image}
-          width={400}
+          width={600}
         />
       </div>
       <CardFooter className="gap-3">
-        <div className="flex justify-end gap-1 pl-6">
+        <div className="flex justify-end gap-1">
           <HeartFilledIcon className="text-danger" />
           <p className="text-default-400 text-small font-semibold">{likes}</p>
-          <p className=" text-default-400 text-small">likes</p>
+          <p className="text-default-400 text-small">likes</p>
         </div>
       </CardFooter>
     </MainCard>
