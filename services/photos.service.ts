@@ -8,6 +8,7 @@ export const photos = async () => {
       liked: true,
       likes: true,
       user: { id: true, image: true, name: true, nickname: true },
+      category: { image: true, name: true },
     },
   })
 
