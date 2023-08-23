@@ -1,7 +1,12 @@
-export const getButtomNavbarItems = async () => {
-  const res = await fetch(
-    process.env.NEXT_PUBLIC_MV_CATEGORIES_MARTIAL_PROMOTIONS ?? ''
-  )
-  const categories = await res.json()
-  return categories
+import { clientGraphql } from '~/graphql'
+
+export const categoriesService = async () => {
+  const { category } = await clientGraphql.query({
+    category: {
+      id: true,
+      emoji: true,
+      image: true,
+    },
+  })
+  return category
 }

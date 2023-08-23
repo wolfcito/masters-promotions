@@ -1,4 +1,4 @@
-export interface BottomNavbar {
+export interface BottomNavbarProps {
   id: number
   name: string
   emoji: string

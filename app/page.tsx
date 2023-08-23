@@ -1,20 +1,15 @@
-import { Card, CardProps } from '~/components/card'
-import { categoriesService } from '~/services'
+import { nanoid } from 'nanoid'
+import { Card } from '~/components/card'
+import { photos } from '~/services'
 
 export default async function Home() {
-  const categories: CardProps[] = await categoriesService()
+  const newsFeed = await photos()
 
   return (
     <section className="flex flex-col items-center justify-center gap-4">
-      {categories.map((category) => [
-        <Card
-          key={category.image}
-          image={category.image}
-          name="Luis Fernando Ushiña"
-          nickname="@wolfcito"
-          likes={category.likes}
-        />,
-      ])}
+      {newsFeed.map((item) => (
+        <Card key={nanoid()} emoji={item.image} image={item.image} />
+      ))}
     </section>
   )
 }
