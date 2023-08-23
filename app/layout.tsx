@@ -44,7 +44,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
           <div className="relative flex h-screen flex-col">
             <Navbar />
-            <main className="container mx-auto max-w-lg flex-grow pb-16 pt-8">
+            <main className="container mx-auto max-w-lg flex-grow pb-24 pt-8">
               {children}
             </main>
             <BottomNavbar categories={categories} />
