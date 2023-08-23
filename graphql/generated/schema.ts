@@ -142,11 +142,15 @@ export type order_by = 'asc' | 'asc_nulls_first' | 'asc_nulls_last' | 'desc' | '
 
 /** principal images for news feed */
 export interface photos {
+    /** An object relationship */
+    category: category
     category_id: Scalars['uuid']
     id: Scalars['uuid']
     image: Scalars['String']
     liked: Scalars['Boolean']
     likes: Scalars['Int']
+    /** An object relationship */
+    user: user
     user_id: Scalars['uuid']
     __typename: 'photos'
 }
@@ -506,6 +510,12 @@ export interface category_mutation_responseGenqlSelection{
 }
 
 
+/** input type for inserting object relation for remote table "category" */
+export interface category_obj_rel_insert_input {data: category_insert_input,
+/** upsert condition */
+on_conflict?: (category_on_conflict | null)}
+
+
 /** on_conflict condition type for table "category" */
 export interface category_on_conflict {constraint: category_constraint,update_columns?: category_update_column[],where?: (category_bool_exp | null)}
 
@@ -649,11 +659,15 @@ export interface mutation_rootGenqlSelection{
 
 /** principal images for news feed */
 export interface photosGenqlSelection{
+    /** An object relationship */
+    category?: categoryGenqlSelection
     category_id?: boolean | number
     id?: boolean | number
     image?: boolean | number
     liked?: boolean | number
     likes?: boolean | number
+    /** An object relationship */
+    user?: userGenqlSelection
     user_id?: boolean | number
     __typename?: boolean | number
     __scalar?: boolean | number
@@ -696,7 +710,7 @@ export interface photos_avg_fieldsGenqlSelection{
 
 
 /** Boolean expression to filter rows from the table "photos". All fields are combined with a logical 'AND'. */
-export interface photos_bool_exp {_and?: (photos_bool_exp[] | null),_not?: (photos_bool_exp | null),_or?: (photos_bool_exp[] | null),category_id?: (uuid_comparison_exp | null),id?: (uuid_comparison_exp | null),image?: (String_comparison_exp | null),liked?: (Boolean_comparison_exp | null),likes?: (Int_comparison_exp | null),user_id?: (uuid_comparison_exp | null)}
+export interface photos_bool_exp {_and?: (photos_bool_exp[] | null),_not?: (photos_bool_exp | null),_or?: (photos_bool_exp[] | null),category?: (category_bool_exp | null),category_id?: (uuid_comparison_exp | null),id?: (uuid_comparison_exp | null),image?: (String_comparison_exp | null),liked?: (Boolean_comparison_exp | null),likes?: (Int_comparison_exp | null),user?: (user_bool_exp | null),user_id?: (uuid_comparison_exp | null)}
 
 
 /** input type for incrementing numeric columns in table "photos" */
@@ -704,7 +718,7 @@ export interface photos_inc_input {likes?: (Scalars['Int'] | null)}
 
 
 /** input type for inserting data into table "photos" */
-export interface photos_insert_input {category_id?: (Scalars['uuid'] | null),id?: (Scalars['uuid'] | null),image?: (Scalars['String'] | null),liked?: (Scalars['Boolean'] | null),likes?: (Scalars['Int'] | null),user_id?: (Scalars['uuid'] | null)}
+export interface photos_insert_input {category?: (category_obj_rel_insert_input | null),category_id?: (Scalars['uuid'] | null),id?: (Scalars['uuid'] | null),image?: (Scalars['String'] | null),liked?: (Scalars['Boolean'] | null),likes?: (Scalars['Int'] | null),user?: (user_obj_rel_insert_input | null),user_id?: (Scalars['uuid'] | null)}
 
 
 /** aggregate max on columns */
@@ -747,7 +761,7 @@ export interface photos_on_conflict {constraint: photos_constraint,update_column
 
 
 /** Ordering options when selecting data from "photos". */
-export interface photos_order_by {category_id?: (order_by | null),id?: (order_by | null),image?: (order_by | null),liked?: (order_by | null),likes?: (order_by | null),user_id?: (order_by | null)}
+export interface photos_order_by {category?: (category_order_by | null),category_id?: (order_by | null),id?: (order_by | null),image?: (order_by | null),liked?: (order_by | null),likes?: (order_by | null),user?: (user_order_by | null),user_id?: (order_by | null)}
 
 
 /** primary key columns input for table: photos */
@@ -1093,6 +1107,12 @@ export interface user_mutation_responseGenqlSelection{
     __typename?: boolean | number
     __scalar?: boolean | number
 }
+
+
+/** input type for inserting object relation for remote table "user" */
+export interface user_obj_rel_insert_input {data: user_insert_input,
+/** upsert condition */
+on_conflict?: (user_on_conflict | null)}
 
 
 /** on_conflict condition type for table "user" */

@@ -5,17 +5,17 @@ export default {
         3,
         5,
         11,
-        19,
-        23,
-        25,
+        20,
+        24,
         26,
-        32,
-        41,
-        49,
-        58,
-        66,
-        70,
-        72
+        27,
+        33,
+        42,
+        50,
+        59,
+        68,
+        72,
+        74
     ],
     "types": {
         "Boolean": {},
@@ -153,7 +153,7 @@ export default {
                 5
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -184,7 +184,7 @@ export default {
                 3,
                 {
                     "columns": [
-                        19,
+                        20,
                         "[category_select_column!]"
                     ],
                     "distinct": [
@@ -216,7 +216,7 @@ export default {
                 6
             ],
             "id": [
-                73
+                75
             ],
             "image": [
                 6
@@ -237,7 +237,7 @@ export default {
                 5
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -257,7 +257,7 @@ export default {
                 5
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -277,7 +277,7 @@ export default {
                 5
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -303,12 +303,23 @@ export default {
                 5
             ]
         },
+        "category_obj_rel_insert_input": {
+            "data": [
+                12
+            ],
+            "on_conflict": [
+                17
+            ],
+            "__typename": [
+                5
+            ]
+        },
         "category_on_conflict": {
             "constraint": [
                 11
             ],
             "update_columns": [
-                23
+                24
             ],
             "where": [
                 10
@@ -319,19 +330,19 @@ export default {
         },
         "category_order_by": {
             "emoji": [
-                26
+                27
             ],
             "id": [
-                26
+                27
             ],
             "image": [
-                26
+                27
             ],
             "name": [
-                26
+                27
             ],
             "slug": [
-                26
+                27
             ],
             "__typename": [
                 5
@@ -339,7 +350,7 @@ export default {
         },
         "category_pk_columns_input": {
             "id": [
-                72
+                74
             ],
             "__typename": [
                 5
@@ -351,7 +362,7 @@ export default {
                 5
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -368,10 +379,10 @@ export default {
         },
         "category_stream_cursor_input": {
             "initial_value": [
-                22
+                23
             ],
             "ordering": [
-                25
+                26
             ],
             "__typename": [
                 5
@@ -382,7 +393,7 @@ export default {
                 5
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -400,7 +411,7 @@ export default {
         "category_update_column": {},
         "category_updates": {
             "_set": [
-                20
+                21
             ],
             "where": [
                 10
@@ -412,11 +423,14 @@ export default {
         "cursor_ordering": {},
         "order_by": {},
         "photos": {
+            "category": [
+                7
+            ],
             "category_id": [
-                72
+                74
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -427,8 +441,11 @@ export default {
             "likes": [
                 3
             ],
+            "user": [
+                55
+            ],
             "user_id": [
-                72
+                74
             ],
             "__typename": [
                 5
@@ -436,10 +453,10 @@ export default {
         },
         "photos_aggregate": {
             "aggregate": [
-                29
+                30
             ],
             "nodes": [
-                27
+                28
             ],
             "__typename": [
                 5
@@ -447,13 +464,13 @@ export default {
         },
         "photos_aggregate_fields": {
             "avg": [
-                30
+                31
             ],
             "count": [
                 3,
                 {
                     "columns": [
-                        41,
+                        42,
                         "[photos_select_column!]"
                     ],
                     "distinct": [
@@ -462,31 +479,31 @@ export default {
                 }
             ],
             "max": [
-                35
-            ],
-            "min": [
                 36
             ],
-            "stddev": [
-                43
+            "min": [
+                37
             ],
-            "stddev_pop": [
+            "stddev": [
                 44
             ],
-            "stddev_samp": [
+            "stddev_pop": [
                 45
             ],
+            "stddev_samp": [
+                46
+            ],
             "sum": [
-                48
+                49
             ],
             "var_pop": [
-                51
-            ],
-            "var_samp": [
                 52
             ],
-            "variance": [
+            "var_samp": [
                 53
+            ],
+            "variance": [
+                54
             ],
             "__typename": [
                 5
@@ -502,19 +519,22 @@ export default {
         },
         "photos_bool_exp": {
             "_and": [
-                31
+                32
             ],
             "_not": [
-                31
+                32
             ],
             "_or": [
-                31
+                32
+            ],
+            "category": [
+                10
             ],
             "category_id": [
-                73
+                75
             ],
             "id": [
-                73
+                75
             ],
             "image": [
                 6
@@ -525,8 +545,11 @@ export default {
             "likes": [
                 4
             ],
+            "user": [
+                58
+            ],
             "user_id": [
-                73
+                75
             ],
             "__typename": [
                 5
@@ -542,11 +565,14 @@ export default {
             ]
         },
         "photos_insert_input": {
+            "category": [
+                16
+            ],
             "category_id": [
-                72
+                74
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -557,8 +583,11 @@ export default {
             "likes": [
                 3
             ],
+            "user": [
+                64
+            ],
             "user_id": [
-                72
+                74
             ],
             "__typename": [
                 5
@@ -566,10 +595,10 @@ export default {
         },
         "photos_max_fields": {
             "category_id": [
-                72
+                74
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -578,7 +607,7 @@ export default {
                 3
             ],
             "user_id": [
-                72
+                74
             ],
             "__typename": [
                 5
@@ -586,10 +615,10 @@ export default {
         },
         "photos_min_fields": {
             "category_id": [
-                72
+                74
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -598,7 +627,7 @@ export default {
                 3
             ],
             "user_id": [
-                72
+                74
             ],
             "__typename": [
                 5
@@ -609,7 +638,7 @@ export default {
                 3
             ],
             "returning": [
-                27
+                28
             ],
             "__typename": [
                 5
@@ -617,36 +646,42 @@ export default {
         },
         "photos_on_conflict": {
             "constraint": [
-                32
+                33
             ],
             "update_columns": [
-                49
+                50
             ],
             "where": [
-                31
+                32
             ],
             "__typename": [
                 5
             ]
         },
         "photos_order_by": {
+            "category": [
+                18
+            ],
             "category_id": [
-                26
+                27
             ],
             "id": [
-                26
+                27
             ],
             "image": [
-                26
+                27
             ],
             "liked": [
-                26
+                27
             ],
             "likes": [
-                26
+                27
+            ],
+            "user": [
+                66
             ],
             "user_id": [
-                26
+                27
             ],
             "__typename": [
                 5
@@ -654,7 +689,7 @@ export default {
         },
         "photos_pk_columns_input": {
             "id": [
-                72
+                74
             ],
             "__typename": [
                 5
@@ -663,10 +698,10 @@ export default {
         "photos_select_column": {},
         "photos_set_input": {
             "category_id": [
-                72
+                74
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -678,7 +713,7 @@ export default {
                 3
             ],
             "user_id": [
-                72
+                74
             ],
             "__typename": [
                 5
@@ -710,10 +745,10 @@ export default {
         },
         "photos_stream_cursor_input": {
             "initial_value": [
-                47
+                48
             ],
             "ordering": [
-                25
+                26
             ],
             "__typename": [
                 5
@@ -721,10 +756,10 @@ export default {
         },
         "photos_stream_cursor_value_input": {
             "category_id": [
-                72
+                74
             ],
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -736,7 +771,7 @@ export default {
                 3
             ],
             "user_id": [
-                72
+                74
             ],
             "__typename": [
                 5
@@ -753,13 +788,13 @@ export default {
         "photos_update_column": {},
         "photos_updates": {
             "_inc": [
-                33
+                34
             ],
             "_set": [
-                42
+                43
             ],
             "where": [
-                31
+                32
             ],
             "__typename": [
                 5
@@ -791,7 +826,7 @@ export default {
         },
         "user": {
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -808,10 +843,10 @@ export default {
         },
         "user_aggregate": {
             "aggregate": [
-                56
+                57
             ],
             "nodes": [
-                54
+                55
             ],
             "__typename": [
                 5
@@ -822,7 +857,7 @@ export default {
                 3,
                 {
                     "columns": [
-                        66,
+                        68,
                         "[user_select_column!]"
                     ],
                     "distinct": [
@@ -831,10 +866,10 @@ export default {
                 }
             ],
             "max": [
-                60
+                61
             ],
             "min": [
-                61
+                62
             ],
             "__typename": [
                 5
@@ -842,16 +877,16 @@ export default {
         },
         "user_bool_exp": {
             "_and": [
-                57
+                58
             ],
             "_not": [
-                57
+                58
             ],
             "_or": [
-                57
+                58
             ],
             "id": [
-                73
+                75
             ],
             "image": [
                 6
@@ -869,7 +904,7 @@ export default {
         "user_constraint": {},
         "user_insert_input": {
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -886,7 +921,7 @@ export default {
         },
         "user_max_fields": {
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -903,7 +938,7 @@ export default {
         },
         "user_min_fields": {
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -923,7 +958,18 @@ export default {
                 3
             ],
             "returning": [
-                54
+                55
+            ],
+            "__typename": [
+                5
+            ]
+        },
+        "user_obj_rel_insert_input": {
+            "data": [
+                60
+            ],
+            "on_conflict": [
+                65
             ],
             "__typename": [
                 5
@@ -931,13 +977,13 @@ export default {
         },
         "user_on_conflict": {
             "constraint": [
-                58
+                59
             ],
             "update_columns": [
-                70
+                72
             ],
             "where": [
-                57
+                58
             ],
             "__typename": [
                 5
@@ -945,16 +991,16 @@ export default {
         },
         "user_order_by": {
             "id": [
-                26
+                27
             ],
             "image": [
-                26
+                27
             ],
             "name": [
-                26
+                27
             ],
             "nickname": [
-                26
+                27
             ],
             "__typename": [
                 5
@@ -962,7 +1008,7 @@ export default {
         },
         "user_pk_columns_input": {
             "id": [
-                72
+                74
             ],
             "__typename": [
                 5
@@ -971,7 +1017,7 @@ export default {
         "user_select_column": {},
         "user_set_input": {
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -988,10 +1034,10 @@ export default {
         },
         "user_stream_cursor_input": {
             "initial_value": [
-                69
+                71
             ],
             "ordering": [
-                25
+                26
             ],
             "__typename": [
                 5
@@ -999,7 +1045,7 @@ export default {
         },
         "user_stream_cursor_value_input": {
             "id": [
-                72
+                74
             ],
             "image": [
                 5
@@ -1017,10 +1063,10 @@ export default {
         "user_update_column": {},
         "user_updates": {
             "_set": [
-                67
+                69
             ],
             "where": [
-                57
+                58
             ],
             "__typename": [
                 5
@@ -1029,31 +1075,31 @@ export default {
         "uuid": {},
         "uuid_comparison_exp": {
             "_eq": [
-                72
+                74
             ],
             "_gt": [
-                72
+                74
             ],
             "_gte": [
-                72
+                74
             ],
             "_in": [
-                72
+                74
             ],
             "_is_null": [
                 0
             ],
             "_lt": [
-                72
+                74
             ],
             "_lte": [
-                72
+                74
             ],
             "_neq": [
-                72
+                74
             ],
             "_nin": [
-                72
+                74
             ],
             "__typename": [
                 5
@@ -1064,7 +1110,7 @@ export default {
                 7,
                 {
                     "distinct_on": [
-                        19,
+                        20,
                         "[category_select_column!]"
                     ],
                     "limit": [
@@ -1074,7 +1120,7 @@ export default {
                         3
                     ],
                     "order_by": [
-                        17,
+                        18,
                         "[category_order_by!]"
                     ],
                     "where": [
@@ -1086,7 +1132,7 @@ export default {
                 8,
                 {
                     "distinct_on": [
-                        19,
+                        20,
                         "[category_select_column!]"
                     ],
                     "limit": [
@@ -1096,7 +1142,7 @@ export default {
                         3
                     ],
                     "order_by": [
-                        17,
+                        18,
                         "[category_order_by!]"
                     ],
                     "where": [
@@ -1108,16 +1154,16 @@ export default {
                 7,
                 {
                     "id": [
-                        72,
+                        74,
                         "uuid!"
                     ]
                 }
             ],
             "photos": [
-                27,
+                28,
                 {
                     "distinct_on": [
-                        41,
+                        42,
                         "[photos_select_column!]"
                     ],
                     "limit": [
@@ -1127,19 +1173,19 @@ export default {
                         3
                     ],
                     "order_by": [
-                        39,
+                        40,
                         "[photos_order_by!]"
                     ],
                     "where": [
-                        31
+                        32
                     ]
                 }
             ],
             "photos_aggregate": [
-                28,
+                29,
                 {
                     "distinct_on": [
-                        41,
+                        42,
                         "[photos_select_column!]"
                     ],
                     "limit": [
@@ -1149,28 +1195,28 @@ export default {
                         3
                     ],
                     "order_by": [
-                        39,
+                        40,
                         "[photos_order_by!]"
                     ],
                     "where": [
-                        31
+                        32
                     ]
                 }
             ],
             "photos_by_pk": [
-                27,
+                28,
                 {
                     "id": [
-                        72,
+                        74,
                         "uuid!"
                     ]
                 }
             ],
             "user": [
-                54,
+                55,
                 {
                     "distinct_on": [
-                        66,
+                        68,
                         "[user_select_column!]"
                     ],
                     "limit": [
@@ -1180,19 +1226,19 @@ export default {
                         3
                     ],
                     "order_by": [
-                        64,
+                        66,
                         "[user_order_by!]"
                     ],
                     "where": [
-                        57
+                        58
                     ]
                 }
             ],
             "user_aggregate": [
-                55,
+                56,
                 {
                     "distinct_on": [
-                        66,
+                        68,
                         "[user_select_column!]"
                     ],
                     "limit": [
@@ -1202,19 +1248,19 @@ export default {
                         3
                     ],
                     "order_by": [
-                        64,
+                        66,
                         "[user_order_by!]"
                     ],
                     "where": [
-                        57
+                        58
                     ]
                 }
             ],
             "user_by_pk": [
-                54,
+                55,
                 {
                     "id": [
-                        72,
+                        74,
                         "uuid!"
                     ]
                 }
@@ -1237,43 +1283,43 @@ export default {
                 7,
                 {
                     "id": [
-                        72,
+                        74,
                         "uuid!"
                     ]
                 }
             ],
             "delete_photos": [
-                37,
+                38,
                 {
                     "where": [
-                        31,
+                        32,
                         "photos_bool_exp!"
                     ]
                 }
             ],
             "delete_photos_by_pk": [
-                27,
+                28,
                 {
                     "id": [
-                        72,
+                        74,
                         "uuid!"
                     ]
                 }
             ],
             "delete_user": [
-                62,
+                63,
                 {
                     "where": [
-                        57,
+                        58,
                         "user_bool_exp!"
                     ]
                 }
             ],
             "delete_user_by_pk": [
-                54,
+                55,
                 {
                     "id": [
-                        72,
+                        74,
                         "uuid!"
                     ]
                 }
@@ -1286,7 +1332,7 @@ export default {
                         "[category_insert_input!]!"
                     ],
                     "on_conflict": [
-                        16
+                        17
                     ]
                 }
             ],
@@ -1298,55 +1344,55 @@ export default {
                         "category_insert_input!"
                     ],
                     "on_conflict": [
-                        16
+                        17
                     ]
                 }
             ],
             "insert_photos": [
-                37,
+                38,
                 {
                     "objects": [
-                        34,
+                        35,
                         "[photos_insert_input!]!"
                     ],
                     "on_conflict": [
-                        38
+                        39
                     ]
                 }
             ],
             "insert_photos_one": [
-                27,
+                28,
                 {
                     "object": [
-                        34,
+                        35,
                         "photos_insert_input!"
                     ],
                     "on_conflict": [
-                        38
+                        39
                     ]
                 }
             ],
             "insert_user": [
-                62,
+                63,
                 {
                     "objects": [
-                        59,
+                        60,
                         "[user_insert_input!]!"
                     ],
                     "on_conflict": [
-                        63
+                        65
                     ]
                 }
             ],
             "insert_user_one": [
-                54,
+                55,
                 {
                     "object": [
-                        59,
+                        60,
                         "user_insert_input!"
                     ],
                     "on_conflict": [
-                        63
+                        65
                     ]
                 }
             ],
@@ -1354,7 +1400,7 @@ export default {
                 15,
                 {
                     "_set": [
-                        20
+                        21
                     ],
                     "where": [
                         10,
@@ -1366,10 +1412,10 @@ export default {
                 7,
                 {
                     "_set": [
-                        20
+                        21
                     ],
                     "pk_columns": [
-                        18,
+                        19,
                         "category_pk_columns_input!"
                     ]
                 }
@@ -1378,79 +1424,79 @@ export default {
                 15,
                 {
                     "updates": [
-                        24,
+                        25,
                         "[category_updates!]!"
                     ]
                 }
             ],
             "update_photos": [
-                37,
+                38,
                 {
                     "_inc": [
-                        33
+                        34
                     ],
                     "_set": [
-                        42
+                        43
                     ],
                     "where": [
-                        31,
+                        32,
                         "photos_bool_exp!"
                     ]
                 }
             ],
             "update_photos_by_pk": [
-                27,
+                28,
                 {
                     "_inc": [
-                        33
+                        34
                     ],
                     "_set": [
-                        42
+                        43
                     ],
                     "pk_columns": [
-                        40,
+                        41,
                         "photos_pk_columns_input!"
                     ]
                 }
             ],
             "update_photos_many": [
-                37,
+                38,
                 {
                     "updates": [
-                        50,
+                        51,
                         "[photos_updates!]!"
                     ]
                 }
             ],
             "update_user": [
-                62,
+                63,
                 {
                     "_set": [
-                        67
+                        69
                     ],
                     "where": [
-                        57,
+                        58,
                         "user_bool_exp!"
                     ]
                 }
             ],
             "update_user_by_pk": [
-                54,
+                55,
                 {
                     "_set": [
-                        67
+                        69
                     ],
                     "pk_columns": [
-                        65,
+                        67,
                         "user_pk_columns_input!"
                     ]
                 }
             ],
             "update_user_many": [
-                62,
+                63,
                 {
                     "updates": [
-                        71,
+                        73,
                         "[user_updates!]!"
                     ]
                 }
@@ -1464,7 +1510,7 @@ export default {
                 7,
                 {
                     "distinct_on": [
-                        19,
+                        20,
                         "[category_select_column!]"
                     ],
                     "limit": [
@@ -1474,7 +1520,7 @@ export default {
                         3
                     ],
                     "order_by": [
-                        17,
+                        18,
                         "[category_order_by!]"
                     ],
                     "where": [
@@ -1486,7 +1532,7 @@ export default {
                 8,
                 {
                     "distinct_on": [
-                        19,
+                        20,
                         "[category_select_column!]"
                     ],
                     "limit": [
@@ -1496,7 +1542,7 @@ export default {
                         3
                     ],
                     "order_by": [
-                        17,
+                        18,
                         "[category_order_by!]"
                     ],
                     "where": [
@@ -1508,7 +1554,7 @@ export default {
                 7,
                 {
                     "id": [
-                        72,
+                        74,
                         "uuid!"
                     ]
                 }
@@ -1521,7 +1567,7 @@ export default {
                         "Int!"
                     ],
                     "cursor": [
-                        21,
+                        22,
                         "[category_stream_cursor_input]!"
                     ],
                     "where": [
@@ -1530,10 +1576,10 @@ export default {
                 }
             ],
             "photos": [
-                27,
+                28,
                 {
                     "distinct_on": [
-                        41,
+                        42,
                         "[photos_select_column!]"
                     ],
                     "limit": [
@@ -1543,19 +1589,19 @@ export default {
                         3
                     ],
                     "order_by": [
-                        39,
+                        40,
                         "[photos_order_by!]"
                     ],
                     "where": [
-                        31
+                        32
                     ]
                 }
             ],
             "photos_aggregate": [
-                28,
+                29,
                 {
                     "distinct_on": [
-                        41,
+                        42,
                         "[photos_select_column!]"
                     ],
                     "limit": [
@@ -1565,44 +1611,44 @@ export default {
                         3
                     ],
                     "order_by": [
-                        39,
+                        40,
                         "[photos_order_by!]"
                     ],
                     "where": [
-                        31
+                        32
                     ]
                 }
             ],
             "photos_by_pk": [
-                27,
+                28,
                 {
                     "id": [
-                        72,
+                        74,
                         "uuid!"
                     ]
                 }
             ],
             "photos_stream": [
-                27,
+                28,
                 {
                     "batch_size": [
                         3,
                         "Int!"
                     ],
                     "cursor": [
-                        46,
+                        47,
                         "[photos_stream_cursor_input]!"
                     ],
                     "where": [
-                        31
+                        32
                     ]
                 }
             ],
             "user": [
-                54,
+                55,
                 {
                     "distinct_on": [
-                        66,
+                        68,
                         "[user_select_column!]"
                     ],
                     "limit": [
@@ -1612,19 +1658,19 @@ export default {
                         3
                     ],
                     "order_by": [
-                        64,
+                        66,
                         "[user_order_by!]"
                     ],
                     "where": [
-                        57
+                        58
                     ]
                 }
             ],
             "user_aggregate": [
-                55,
+                56,
                 {
                     "distinct_on": [
-                        66,
+                        68,
                         "[user_select_column!]"
                     ],
                     "limit": [
@@ -1634,36 +1680,36 @@ export default {
                         3
                     ],
                     "order_by": [
-                        64,
+                        66,
                         "[user_order_by!]"
                     ],
                     "where": [
-                        57
+                        58
                     ]
                 }
             ],
             "user_by_pk": [
-                54,
+                55,
                 {
                     "id": [
-                        72,
+                        74,
                         "uuid!"
                     ]
                 }
             ],
             "user_stream": [
-                54,
+                55,
                 {
                     "batch_size": [
                         3,
                         "Int!"
                     ],
                     "cursor": [
-                        68,
+                        70,
                         "[user_stream_cursor_input]!"
                     ],
                     "where": [
-                        57
+                        58
                     ]
                 }
             ],

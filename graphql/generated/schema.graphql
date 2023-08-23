@@ -187,6 +187,16 @@ type category_mutation_response {
 }
 
 """
+input type for inserting object relation for remote table "category"
+"""
+input category_obj_rel_insert_input {
+  data: category_insert_input!
+
+  """upsert condition"""
+  on_conflict: category_on_conflict
+}
+
+"""
 on_conflict condition type for table "category"
 """
 input category_on_conflict {
@@ -518,11 +528,16 @@ enum order_by {
 
 """principal images for news feed"""
 type photos {
+  """An object relationship"""
+  category: category!
   category_id: uuid!
   id: uuid!
   image: String!
   liked: Boolean!
   likes: Int!
+
+  """An object relationship"""
+  user: user!
   user_id: uuid!
 }
 
@@ -563,11 +578,13 @@ input photos_bool_exp {
   _and: [photos_bool_exp!]
   _not: photos_bool_exp
   _or: [photos_bool_exp!]
+  category: category_bool_exp
   category_id: uuid_comparison_exp
   id: uuid_comparison_exp
   image: String_comparison_exp
   liked: Boolean_comparison_exp
   likes: Int_comparison_exp
+  user: user_bool_exp
   user_id: uuid_comparison_exp
 }
 
@@ -592,11 +609,13 @@ input photos_inc_input {
 input type for inserting data into table "photos"
 """
 input photos_insert_input {
+  category: category_obj_rel_insert_input
   category_id: uuid
   id: uuid
   image: String
   liked: Boolean
   likes: Int
+  user: user_obj_rel_insert_input
   user_id: uuid
 }
 
@@ -640,11 +659,13 @@ input photos_on_conflict {
 
 """Ordering options when selecting data from "photos"."""
 input photos_order_by {
+  category: category_order_by
   category_id: order_by
   id: order_by
   image: order_by
   liked: order_by
   likes: order_by
+  user: user_order_by
   user_id: order_by
 }
 
@@ -1165,6 +1186,16 @@ type user_mutation_response {
 
   """data from the rows affected by the mutation"""
   returning: [user!]!
+}
+
+"""
+input type for inserting object relation for remote table "user"
+"""
+input user_obj_rel_insert_input {
+  data: user_insert_input!
+
+  """upsert condition"""
+  on_conflict: user_on_conflict
 }
 
 """
