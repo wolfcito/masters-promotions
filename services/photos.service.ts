@@ -1,32 +1,14 @@
-export const categoriesService = async () => {
-  try {
-    const res = await fetch(
-      process.env.NEXT_PUBLIC_MV_GRAPHQL_MARTIAL_PROMOTIONS as string,
-      {
-        method: 'POST',
-        headers: {
-          'x-hasura-admin-secret': process.env.HASURA_ADM_SECRET as string,
-        },
-        body: JSON.stringify({
-          query: `
-          query newsfeed {
-            photos {
-              category_id
-              id
-              image
-              liked
-              likes
-            }
-          }
-          `,
-        }),
-      }
-    )
+import { clientGraphql } from '~/graphql'
 
-    const categories = await res.json()
-    const { photos } = categories.data
-    return photos
-  } catch (e) {
-    console.log(e)
-  }
+export const photos = async () => {
+  const { photos } = await clientGraphql.query({
+    photos: {
+      id: true,
+      image: true,
+      liked: true,
+      likes: true,
+    },
+  })
+
+  return photos
 }
