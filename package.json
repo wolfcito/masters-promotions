@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "genql": "./etc/genql.sh",
+    "genql-local": "./etc/genql.local.sh"
   },
   "dependencies": {
     "@nextui-org/badge": "^2.0.9",

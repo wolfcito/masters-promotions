@@ -1,0 +1,1 @@
+genql --endpoint http://localhost:8080/graphql --output ./graphql/generated -H 'content-type: application/json', 'admin: chanchito-feliz'
