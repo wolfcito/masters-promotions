@@ -1,6 +1,9 @@
-export interface CardProps {
+export interface CategoryProps {
+  emoji: string
+  id?: string
   image: string
-  name: string
-  likes: number
-  nickname: string
+  name?: string
+  slug?: string
+  nickname?: string
+  likes?: number
 }

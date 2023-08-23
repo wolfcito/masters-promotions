@@ -8,9 +8,14 @@ import {
 } from '@nextui-org/react'
 
 import { HeartFilledIcon } from '~/icons'
-import { CardProps } from './card.type'
+import { CategoryProps } from './card.type'
 
-export function Card({ image, name, nickname, likes }: CardProps) {
+export function Card({
+  image,
+  name = 'Unknown',
+  nickname = '@unknown',
+  likes = 0,
+}: CategoryProps) {
   return (
     <MainCard className="w-full" isBlurred>
       <CardHeader className="justify-between">
