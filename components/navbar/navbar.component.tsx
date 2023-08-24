@@ -14,8 +14,8 @@ export function Navbar() {
   return (
     <NextUINavbar
       maxWidth="xl"
-      position="sticky"
       className="bg-white/10 backdrop-blur-md"
+      shouldHideOnScroll
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="max-w-fit gap-3">
@@ -39,9 +39,11 @@ export function Navbar() {
           as={Link}
           className="text-default-600 bg-default-100 text-sm font-normal"
           href={siteConfig.links.sponsor}
-          startContent={<HeartFilledIcon className="text-danger" />}
           variant="light"
-        ></Button>
+          aria-label="sponsor"
+        >
+          <HeartFilledIcon className="text-danger" />
+        </Button>
       </NavbarContent>
     </NextUINavbar>
   )
