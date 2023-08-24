@@ -19,7 +19,7 @@ export function Card({
 }: CategoryProps) {
   return (
     <MainCard
-      className="w-full rounded-none dark:bg-stone-800 md:rounded-md"
+      className="w-full rounded-none dark:bg-stone-900 md:rounded-md"
       isBlurred
     >
       <CardHeader className="justify-between">
