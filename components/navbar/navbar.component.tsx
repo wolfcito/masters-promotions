@@ -4,11 +4,9 @@ import {
   NavbarContent,
   NavbarBrand,
 } from '@nextui-org/navbar'
-import { Link } from '@nextui-org/link'
-import { HeartFilledIcon } from '~/icons'
-import { siteConfig } from '~/config/site'
-import { Button } from '@nextui-org/button'
+
 import { ThemeSwitch } from '~/components/theme-switch'
+import { Menu } from '~/components/menu'
 
 export function Navbar() {
   return (
@@ -33,17 +31,7 @@ export function Navbar() {
 
       <NavbarContent className="basis-1 pl-4" justify="end">
         <ThemeSwitch />
-        <Button
-          isIconOnly
-          isExternal
-          as={Link}
-          className="text-default-600 bg-default-100 text-sm font-normal"
-          href={siteConfig.links.sponsor}
-          variant="light"
-          aria-label="sponsor"
-        >
-          <HeartFilledIcon className="text-danger" />
-        </Button>
+        <Menu />
       </NavbarContent>
     </NextUINavbar>
   )
