@@ -6,6 +6,7 @@ export const categoriesService = async () => {
       id: true,
       emoji: true,
       image: true,
+      slug: true,
     },
   })
   return category
