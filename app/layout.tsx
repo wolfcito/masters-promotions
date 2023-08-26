@@ -38,11 +38,12 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
-          <div className="relative flex h-screen flex-col">
+          <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-lg flex-grow pb-24 pt-8">
+            <main className="container flex-grow max-w-lg pt-8 pb-24 mx-auto">
               {children}
             </main>
+            {/* @ts-expect-error Async Server Component */}
             <BottomNavbar />
           </div>
         </Providers>
