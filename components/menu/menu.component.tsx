@@ -5,16 +5,14 @@ import {
   DropdownMenu,
   DropdownItem,
   Button,
-  Link,
 } from '@nextui-org/react'
 
+import { redirectLink } from '~/lib'
+import { useRouter } from 'next/navigation'
 import { HeartFilledIcon, SettingsIcon } from '~/icons'
-import { siteConfig } from '~/config/site'
 
 export function Menu() {
-  const redirectLink = (key: React.Key, url: string) => {
-    if (key === 'sponsor') window.open(url, '_blank', 'noreferrer')
-  }
+  const router = useRouter()
 
   return (
     <Dropdown backdrop="blur">
@@ -27,19 +25,24 @@ export function Menu() {
         variant="flat"
         aria-label="Static Actions"
         disabledKeys={['login', 'register']}
-        onAction={(key) => redirectLink(key, siteConfig.links.sponsor)}
+        onAction={(key) => redirectLink(key, router.push)}
       >
         {/* <DropdownItem key="login">Login</DropdownItem>
         <DropdownItem key="register">Register</DropdownItem> */}
+        <DropdownItem
+          key="about"
+          color="default"
+          startContent={<HeartFilledIcon />}
+        >
+          about
+        </DropdownItem>
         <DropdownItem
           key="sponsor"
           className="text-danger"
           color="danger"
           startContent={<HeartFilledIcon className="text-danger" />}
         >
-          <Link href={siteConfig.links.sponsor} color="danger" isExternal>
-            Sponsor
-          </Link>
+          Sponsor
         </DropdownItem>
       </DropdownMenu>
     </Dropdown>
