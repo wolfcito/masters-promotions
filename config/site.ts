@@ -47,7 +47,7 @@ export const siteConfig = {
   links: {
     github: 'https://github.com/wolfcito',
     twitter: 'https://twitter.com/AKAwolfcito',
-    docs: 'https://wolfcito.mundovirtual.solutions',
+    docs: 'https://wolfcito.mundovirtual.solutions/projects/',
     discord: '#',
     sponsor: 'https://patreon.com/wolfcito',
   },
