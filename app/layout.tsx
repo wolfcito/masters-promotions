@@ -1,7 +1,7 @@
 import '~/styles/globals.css'
 
 import { fontSans } from '~/config/fonts'
-import { Providers } from './providers'
+import { Providers } from '~/app/providers'
 
 import clsx from 'clsx'
 
@@ -9,8 +9,6 @@ import { Metadata } from 'next'
 import { siteConfig } from '~/config/site'
 import { Navbar } from '~/components/navbar'
 import { BottomNavbar } from '~/components/bottom-navbar'
-
-import { categoriesService } from '~/services'
 
 export const metadata: Metadata = {
   title: {
@@ -30,8 +28,6 @@ export const metadata: Metadata = {
 }
 
 export default async function RootLayout({ children }: RootLayoutProps) {
-  const categories = await categoriesService()
-
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
@@ -47,7 +43,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             <main className="container mx-auto max-w-lg flex-grow pb-24 pt-8">
               {children}
             </main>
-            <BottomNavbar categories={categories} />
+            <BottomNavbar />
           </div>
         </Providers>
       </body>
